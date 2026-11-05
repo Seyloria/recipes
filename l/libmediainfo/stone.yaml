@@ -3,7 +3,7 @@
 
 name        : libmediainfo
 version     : "26.10"
-release     : 1
+release     : 2
 homepage    : https://github.com/MediaArea/MediaInfoLib
 upstreams   :
     - https://github.com/MediaArea/MediaInfoLib/archive/refs/tags/v26.10.tar.gz : 3985db56d18d504b0852c1485cfa9dbaf2733876058e9b8dc1b1411ebeba225d
@@ -28,3 +28,7 @@ build       : |
     %cmake_build
 install     : |
     %cmake_install
+packages    :
+    - "%(name)-devel":
+        reundeps:
+            - pkgconfig(zlib)
